@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +18,11 @@ import com.lms.ls.rest.model.client.LibraryRestResponse;
 import com.lms.ls.rest.model.client.RequestMetaData;
 import com.lms.ls.rest.service.LibraryBookService;
 
+import lombok.AllArgsConstructor;
+
 @RestController
-@RequestMapping("/lib/books")
+@RequestMapping("/books")
+@AllArgsConstructor
 public class LibraryBookRestController {
 	private LibraryBookService libraryBookService;
 
@@ -33,7 +37,7 @@ public class LibraryBookRestController {
 	}
 
 	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<Object> addBook(LibraryBook libraryBook) {
+	public ResponseEntity<Object> addBook(@RequestBody LibraryBook libraryBook) {
 		return returnResponse(libraryBookService.addBook(libraryBook));
 	}
 

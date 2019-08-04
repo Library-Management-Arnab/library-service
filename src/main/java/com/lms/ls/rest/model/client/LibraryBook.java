@@ -11,7 +11,6 @@ import lombok.Data;
 @ApiModel(description = "Book model for API request and response")
 public class LibraryBook {
 	// This field will only be read from JSON
-	@JsonProperty(access = Access.READ_ONLY)
 	@ApiModelProperty(dataType = "String", notes = "ISBN number will not be read from API input. It will display the value from the database.", example = "B123456789012345", allowEmptyValue = false, readOnly = true)
 	private String isbn;
 
