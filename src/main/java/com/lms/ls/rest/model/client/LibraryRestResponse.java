@@ -7,4 +7,5 @@ public class LibraryRestResponse<T> {
 	private T body;
 	private RequestMetaData metaData;
 	private String finalStatus;
+	private int recordReturned;
 }

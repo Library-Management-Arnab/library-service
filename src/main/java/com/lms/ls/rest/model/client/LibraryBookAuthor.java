@@ -15,7 +15,6 @@ public class LibraryBookAuthor implements Serializable, Comparable<LibraryBookAu
 	private static final long serialVersionUID = -302934094232424L;
 
 	// This field will only be read from JSON
-	@JsonProperty(access = Access.READ_ONLY)
 	@ApiModelProperty(dataType = "String", notes = "Author Id will not be read from API input. It will display the value from the database.", example = "AU13456789012345", allowEmptyValue = false, readOnly = true)
 	private String authorId;
 
