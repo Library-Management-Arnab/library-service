@@ -14,10 +14,6 @@ import lombok.AllArgsConstructor;
 public class LibraryBookService {
 	private BookServiceRepository bookServiceRepository;
 
-	public void login() {
-
-	}
-
 	public List<LibraryBook> getAllBooks() {
 		return bookServiceRepository.getAllBooks();
 	}
@@ -28,6 +24,10 @@ public class LibraryBookService {
 
 	public LibraryBook addBook(LibraryBook libraryBook) {
 		return bookServiceRepository.addBook(libraryBook);
+	}
+	
+	public LibraryBook updateBook(String bookId, LibraryBook libraryBook) {
+		return bookServiceRepository.updateBook(bookId, libraryBook);
 	}
 
 	public void deleteBook(String bookId) {

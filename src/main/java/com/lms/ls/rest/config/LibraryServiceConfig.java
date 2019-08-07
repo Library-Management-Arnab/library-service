@@ -8,7 +8,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class LibraryServiceConfig {
 	@Bean
 	public WebClient webClient() {
-		WebClient.Builder builder = WebClient.builder();
 		return WebClient.create();
 	}
 }
