@@ -13,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 
 import com.lms.ls.rest.config.ServiceExplorer;
 import com.lms.ls.rest.model.client.LibraryBook;
-import com.lms.ls.rest.service.BaseServiceRepository;
 import com.lms.svc.common.constants.ApplicationCommonConstants;
 
 import lombok.AllArgsConstructor;

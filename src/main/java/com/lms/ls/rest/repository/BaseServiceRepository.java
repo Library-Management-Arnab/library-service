@@ -1,4 +1,4 @@
-package com.lms.ls.rest.service;
+package com.lms.ls.rest.repository;
 
 import java.io.IOException;
 

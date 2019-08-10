@@ -2,14 +2,12 @@ package com.lms.ls.rest.service;
 
 import org.springframework.stereotype.Component;
 
-import com.lms.ls.rest.repository.UserServiceRepository;
-
 import lombok.AllArgsConstructor;
 
 @Component
 @AllArgsConstructor
 public class LibraryUserService {
-	private UserServiceRepository userServiceRepository;
+	//private UserServiceRepository userServiceRepository;
 	
 	public void getAllUsers() {
 		
